@@ -1,0 +1,25 @@
+@font-face{font-family:"Royal Theatre Sans";src:url("../assets/fonts/RoyalTheatreSansLt.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Royal Theatre Sans";src:url("../assets/fonts/RoyalTheatreSansLtIt.ttf") format("truetype");font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:"Royal Theatre Sans";src:url("../assets/fonts/RoyalTheatreSansDmBd.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap;}
+@font-face{font-family:"Royal Theatre Serif";src:url("../assets/fonts/RoyalTheatreSerifLt.ttf") format("truetype");font-weight:300;font-style:normal;font-display:swap;}
+@font-face{font-family:"Royal Theatre Serif";src:url("../assets/fonts/RoyalTheatreSerifLtIt.ttf") format("truetype");font-weight:300;font-style:italic;font-display:swap;}
+@font-face{font-family:"Royal Theatre Serif";src:url("../assets/fonts/RoyalTheatreSerifDmBd.ttf") format("truetype");font-weight:600;font-style:normal;font-display:swap;}
+/* Normalidad, Panama and Gogol are referenced in the source file but no webfont files were supplied.
+   Substituted with close Google Fonts equivalents below — flagged in readme.md. */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Playfair+Display:ital@0;1&display=swap');
+:root{
+--font-serif:"Royal Theatre Serif",ui-serif,Georgia,"Times New Roman",serif;
+--font-sans:"Royal Theatre Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+--font-display-extended:"Archivo Black","Royal Theatre Sans",sans-serif; /* substitute for Normalidad UltraExtended */
+--font-accent-italic:"Playfair Display","Royal Theatre Serif",serif; /* substitute for Panama / Gogol italic */
+--text-display-xl:600 108px/0.92 var(--font-serif);
+--text-display-lg:300 60px/0.92 var(--font-serif);
+--text-display-md:600 45px/0.85 var(--font-sans);
+--text-label-lg:600 26px/1 var(--font-sans);
+--text-label-md:600 18px/1.05 var(--font-sans);
+--text-body:300 14px/1.2 var(--font-sans);
+--text-caption:600 30px/1.06 var(--font-display-extended);
+--tracking-tight:-0.07em;
+--tracking-tighter:-0.13em;
+--tracking-loose:-0.02em;
+}

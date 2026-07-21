@@ -1,0 +1,224 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/brand/**",
+              "components/social/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Royal Theatre Sans|Royal Theatre Serif|Archivo Black|Playfair Display))/i]",
+        "message": "Font not provided by the design system. Available: Royal Theatre Sans, Royal Theatre Serif, Archivo Black, Playfair Display."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Logo'] > JSXAttribute > JSXIdentifier[name!=/^(?:variant|color|size|key|ref|className|style|children)$/]",
+        "message": "<Logo> doesn't accept that prop. Declared props: variant, color, size."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Logo'] > JSXAttribute[name.name='variant'] > Literal[value!=/^(?:mark|wordmark)$/]",
+        "message": "<Logo> variant must be one of 'mark' | 'wordmark'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='NotchedBadge'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|notch|corner|fill|outline|textColor|style|key|ref|className|style|children)$/]",
+        "message": "<NotchedBadge> doesn't accept that prop. Declared props: children, notch, corner, fill, outline, textColor, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='NotchedBadge'] > JSXAttribute[name.name='corner'] > Literal[value!=/^(?:tr|bl|tr-bl)$/]",
+        "message": "<NotchedBadge> corner must be one of 'tr' | 'bl' | 'tr-bl'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PillSticker'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|fill|textColor|icon|rotate|key|ref|className|style|children)$/]",
+        "message": "<PillSticker> doesn't accept that prop. Declared props: children, fill, textColor, icon, rotate."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PosterCard'] > JSXAttribute > JSXIdentifier[name!=/^(?:image|eyebrow|titleTop|titleBottom|dateText|bodyText|fill|width|key|ref|className|style|children)$/]",
+        "message": "<PosterCard> doesn't accept that prop. Declared props: image, eyebrow, titleTop, titleBottom, dateText, bodyText, fill, width."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='StickerCircle'] > JSXAttribute > JSXIdentifier[name!=/^(?:image|ring|ringColor|size|caption|key|ref|className|style|children)$/]",
+        "message": "<StickerCircle> doesn't accept that prop. Declared props: image, ring, ringColor, size, caption."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Logo": {
+        "replaces": []
+      },
+      "NotchedBadge": {
+        "replaces": []
+      },
+      "PillSticker": {
+        "replaces": []
+      },
+      "PosterCard": {
+        "replaces": []
+      },
+      "StickerCircle": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--border-hairline",
+      "--brand-primary",
+      "--brand-secondary",
+      "--font-accent-italic",
+      "--font-display-extended",
+      "--font-sans",
+      "--font-serif",
+      "--nf-black",
+      "--nf-blue",
+      "--nf-blue-dark",
+      "--nf-green",
+      "--nf-green-dark",
+      "--nf-green-light",
+      "--nf-green-mid",
+      "--nf-grey-100",
+      "--nf-grey-200",
+      "--nf-grey-300",
+      "--nf-grey-400",
+      "--nf-grey-900",
+      "--nf-ink",
+      "--nf-orange",
+      "--nf-orange-2",
+      "--nf-purple",
+      "--nf-purple-light",
+      "--nf-white",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--shadow-soft",
+      "--space-1",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--stroke-hairline",
+      "--stroke-hairline-thick",
+      "--surface-inverse",
+      "--surface-muted",
+      "--surface-page",
+      "--text-body",
+      "--text-caption",
+      "--text-display-lg",
+      "--text-display-md",
+      "--text-display-xl",
+      "--text-ghost",
+      "--text-label-lg",
+      "--text-label-md",
+      "--text-muted",
+      "--text-on-brand",
+      "--text-primary",
+      "--tracking-loose",
+      "--tracking-tight",
+      "--tracking-tighter"
+    ],
+    "tokenKinds": {
+      "--nf-blue": "color",
+      "--nf-blue-dark": "color",
+      "--nf-purple": "color",
+      "--nf-purple-light": "color",
+      "--nf-orange": "color",
+      "--nf-orange-2": "color",
+      "--nf-green": "color",
+      "--nf-green-dark": "color",
+      "--nf-green-mid": "color",
+      "--nf-green-light": "color",
+      "--nf-ink": "color",
+      "--nf-black": "color",
+      "--nf-white": "color",
+      "--nf-grey-100": "color",
+      "--nf-grey-200": "color",
+      "--nf-grey-300": "color",
+      "--nf-grey-400": "color",
+      "--nf-grey-900": "color",
+      "--surface-page": "color",
+      "--surface-muted": "color",
+      "--surface-inverse": "color",
+      "--brand-primary": "color",
+      "--brand-secondary": "color",
+      "--text-primary": "font",
+      "--text-on-brand": "font",
+      "--text-muted": "font",
+      "--text-ghost": "font",
+      "--border-hairline": "color",
+      "--shadow-soft": "shadow",
+      "--font-serif": "font",
+      "--font-sans": "font",
+      "--font-display-extended": "font",
+      "--font-accent-italic": "font",
+      "--text-display-xl": "font",
+      "--text-display-lg": "font",
+      "--text-display-md": "font",
+      "--text-label-lg": "font",
+      "--text-label-md": "font",
+      "--text-body": "font",
+      "--text-caption": "font",
+      "--tracking-tight": "font",
+      "--tracking-tighter": "font",
+      "--tracking-loose": "font",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-pill": "radius",
+      "--stroke-hairline": "color",
+      "--stroke-hairline-thick": "color"
+    },
+    "fontFamilies": [
+      "Archivo Black",
+      "Playfair Display",
+      "Royal Theatre Sans",
+      "Royal Theatre Serif"
+    ]
+  }
+}

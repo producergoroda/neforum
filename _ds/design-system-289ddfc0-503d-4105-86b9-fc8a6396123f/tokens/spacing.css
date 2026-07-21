@@ -1,0 +1,16 @@
+:root{
+--space-1:4px;
+--space-2:8px;
+--space-3:12px;
+--space-4:16px;
+--space-5:20px;
+--space-6:25px;
+--space-7:36px;
+--space-8:45px;
+--space-9:60px;
+--radius-sm:5px;
+--radius-md:24px;
+--radius-pill:999px;
+--stroke-hairline:0.3px;
+--stroke-hairline-thick:0.45px;
+}

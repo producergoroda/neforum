@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>НФ'26 — Открытый набор</title>
+<template id="__bundler_thumbnail"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140"><rect width="200" height="140" fill="#027BFD"/><text x="30" y="80" font-family="sans-serif" font-size="42" font-weight="700" fill="#fff">НФ</text></svg></template>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/tokens/colors.css?v=2">
+<link rel="stylesheet" href="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/tokens/typography.css?v=2">
+<link rel="stylesheet" href="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/tokens/spacing.css?v=2">
+<link rel="stylesheet" href="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/styles.css?v=2">
+<link rel="preload" as="font" type="font/ttf" href="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/assets/fonts/RoyalTheatreSansLt.ttf" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/ttf" href="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/assets/fonts/RoyalTheatreSansDmBd.ttf" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/ttf" href="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/assets/fonts/RoyalTheatreSerifLt.ttf" crossorigin="anonymous">
+<link rel="preload" as="font" type="font/ttf" href="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/assets/fonts/RoyalTheatreSerifDmBd.ttf" crossorigin="anonymous">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/_ds_bundle.js?v=2"></script>
+<script src="image-slot.js?v=2"></script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--nf-white);color:var(--text-primary);font:var(--text-body);overflow-x:hidden}
+a{color:var(--nf-blue)}
+a:hover{color:var(--nf-blue-dark)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 var(--space-8)}
+.cap{text-transform:uppercase}
+.eyebrow{font:var(--text-label-md);letter-spacing:var(--tracking-loose);color:var(--nf-blue);text-transform:uppercase}
+.muted{color:var(--text-muted)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:50;background:rgba(255,255,255,0.92);backdrop-filter:blur(6px);border-bottom:var(--stroke-hairline) solid var(--nf-blue)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:var(--space-4) var(--space-8);display:flex;align-items:center;justify-content:space-between;gap:var(--space-6)}
+#logo-root{flex:none}
+.nav-links{display:flex;gap:var(--space-6);flex-wrap:wrap}
+.nav-links a{font:var(--text-label-md);font-size:14px;color:var(--text-primary);text-decoration:none;text-transform:uppercase;letter-spacing:var(--tracking-loose)}
+.nav-links a:hover{color:var(--nf-blue)}
+.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--nf-blue);color:var(--nf-white);font:var(--text-label-md);text-transform:uppercase;letter-spacing:var(--tracking-loose);padding:var(--space-4) var(--space-7);text-decoration:none;white-space:nowrap;border:none;cursor:pointer;transition:background .15s}
+.btn:hover{background:var(--nf-blue-dark)}
+.btn.ghost{background:transparent;color:var(--nf-blue);box-shadow:inset 0 0 0 var(--stroke-hairline-thick) var(--nf-blue)}
+.btn.ghost:hover{background:var(--nf-blue);color:var(--nf-white)}
+
+/* hero */
+.hero{position:relative;background:var(--nf-blue);color:var(--nf-white);overflow:hidden}
+.hero-grid{max-width:1180px;margin:0 auto;padding:var(--space-9) var(--space-8) 90px;display:grid;grid-template-columns:1.15fr 0.85fr;gap:64px;align-items:center}
+.hero-grid>div{min-width:0}
+#hero-eyebrow-root{margin-bottom:var(--space-6)}
+.hero h1{font:var(--text-display-xl);font-weight:300;font-size:clamp(40px,5.2vw,84px);overflow-wrap:normal;word-break:keep-all;hyphens:none;color:var(--nf-white);text-transform:uppercase;letter-spacing:var(--tracking-loose)}
+.hero h1 span{display:block;white-space:nowrap}
+.hero h2{font:var(--text-display-md);font-weight:300;font-family:var(--font-sans);color:var(--nf-white);text-transform:none;font-size:28px;margin-top:var(--space-6);max-width:520px}
+.hero-body{margin-top:var(--space-7);font-size:17px;line-height:1.5;max-width:520px;color:rgba(255,255,255,0.88)}
+.hero-cta{margin-top:var(--space-8);display:flex;align-items:center;gap:var(--space-6);flex-wrap:wrap}
+.hero-cta .btn{background:var(--nf-white);color:var(--nf-blue)}
+.hero-cta .btn:hover{background:var(--nf-grey-100)}
+.hero-cta .fine{font-size:13px;color:rgba(255,255,255,0.75)}
+.hero-visual{position:relative;width:100%;aspect-ratio:4/5}
+.notch-frame{position:relative;border-radius:4px}
+.notch-frame image-slot{display:block;width:100%;height:100%;border-radius:4px;clip-path:polygon(0 0,calc(100% - 20px) 0,100% 20px,100% 100%,0 100%)}
+.notch-fold{position:absolute;top:0;right:0;width:20px;height:20px;background:linear-gradient(135deg,rgba(255,255,255,0.6),rgba(0,0,0,0.28));pointer-events:none}
+.hero-collage{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;gap:14px;width:100%;height:100%}
+.hero-collage .p1{grid-column:1/3;grid-row:1/2}
+.hero-collage .p2{grid-column:1/2;grid-row:2/3}
+.hero-collage .p3{grid-column:2/3;grid-row:2/3}
+.nf-logo{display:inline-flex;align-items:center;justify-content:center;background:var(--nf-blue);padding:10px;flex:none}
+.nf-logo svg{height:26px;width:auto;display:block;color:var(--nf-white)}
+@media (max-width:860px){.alumni-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (min-width:861px) and (max-width:1180px){.alumni-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+
+/* section shell */
+section{padding:var(--space-9) 0;position:relative;overflow:hidden}
+.section-head{margin-bottom:var(--space-8);max-width:720px}
+.section-head .eyebrow{margin-bottom:var(--space-3);display:block}
+.section-head h2{font:var(--text-display-lg);font-size:48px;color:var(--nf-ink);text-transform:uppercase;letter-spacing:var(--tracking-loose)}
+.section-head p{margin-top:var(--space-5);font-size:16px;line-height:1.55;color:var(--text-muted)}
+
+/* about */
+#about{background:var(--nf-white)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:start}
+.about-grid>div{min-width:0}
+.about-grid p{font-size:16px;line-height:1.6;margin-bottom:var(--space-5)}
+.about-photo{position:relative;width:100%;aspect-ratio:1/1}
+.grant-badge{margin-top:var(--space-6);max-width:280px}
+.grant-badge img{display:block;width:100%;height:auto}
+
+/* theme */
+#theme{background:var(--nf-grey-300)}
+.theme-badges{display:flex;gap:var(--space-5);margin-bottom:var(--space-7);flex-wrap:wrap}
+.theme-list{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--space-6);margin-top:var(--space-7)}
+.theme-item{background:var(--nf-white);padding:var(--space-7);border-radius:0}
+.theme-item .num{font:var(--text-display-md);font-family:var(--font-serif);font-weight:600;font-size:36px;color:var(--nf-blue);display:block;margin-bottom:var(--space-3)}
+.theme-item p{font-size:15px;line-height:1.5}
+.format-note{margin-top:var(--space-7);font-size:15px;color:var(--text-muted);max-width:640px;font-style:italic}
+
+/* logistics */
+#logistics{background:var(--nf-white)}
+.logi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--space-6)}
+.logi-card{padding:var(--space-7);box-shadow:inset 0 0 0 var(--stroke-hairline) var(--nf-blue)}
+.logi-card .eyebrow{display:block;margin-bottom:var(--space-4)}
+.logi-card .big{font:var(--text-display-lg);font-size:34px;color:var(--nf-ink);text-transform:uppercase;line-height:1.1}
+.logi-card p{margin-top:var(--space-4);font-size:14px;color:var(--text-muted);line-height:1.5}
+.terms{margin-top:var(--space-8);display:grid;grid-template-columns:1fr 1fr;gap:var(--space-8);padding-top:var(--space-8);border-top:var(--stroke-hairline) solid var(--nf-blue)}
+.terms h3{font:var(--text-label-lg);text-transform:uppercase;color:var(--nf-blue);margin-bottom:var(--space-4)}
+.terms p{font-size:15px;line-height:1.6}
+
+/* program */
+#program{background:var(--nf-ink);color:var(--nf-white)}
+#program .section-head h2{color:var(--nf-white)}
+#program .section-head p{color:rgba(255,255,255,0.6)}
+.days{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-6)}
+.day-card{background:rgba(255,255,255,0.06);padding:var(--space-7);box-shadow:inset 0 0 0 var(--stroke-hairline-thick) var(--nf-blue)}
+.day-card h3{font:var(--text-display-md);font-size:24px;color:var(--nf-white);text-transform:uppercase;margin-bottom:var(--space-4)}
+.day-card p{font-size:14px;line-height:1.5;color:rgba(255,255,255,0.85)}
+.program-note{margin-top:var(--space-7);font-size:14px;color:rgba(255,255,255,0.55);max-width:600px}
+
+/* recap */
+#recap{background:var(--nf-purple-light)}
+.recap-circles{display:flex;gap:var(--space-7);justify-content:center;flex-wrap:wrap;margin-top:var(--space-8)}
+.circle-wrap{position:relative;width:200px;height:200px;border-radius:50%;box-shadow:0 0 0 12px var(--nf-white)}
+.circle-wrap image-slot{border-radius:50%;display:block;width:100%;height:100%}
+.circle-cap{text-align:center;margin-top:var(--space-4);font:var(--text-label-lg);text-transform:uppercase;color:var(--nf-ink)}
+.recap-link{text-align:center;margin-top:var(--space-8)}
+.recap-video{text-align:center;margin-top:var(--space-8)}
+.recap-video-frame{position:relative;width:100%;max-width:800px;margin:0 auto;aspect-ratio:16/9;overflow:hidden;background:var(--nf-ink)}
+.recap-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.recap-video-cap{margin-top:var(--space-4);font-size:15px;color:var(--text-muted)}
+
+/* alumni */
+#alumni{background:var(--nf-white)}
+.alumni-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:var(--space-5)}
+.alumni-card{display:flex;flex-direction:column;gap:var(--space-4);min-width:0}
+.alumni-photo{position:relative;width:100%;aspect-ratio:1/1;overflow:hidden}
+.alumni-card .name{font:var(--text-label-lg);font-size:17px;text-transform:none;color:var(--nf-ink)}
+.alumni-card .role{margin-top:2px;font-size:13px;color:var(--text-muted);line-height:1.4}
+.alumni-more{margin-top:var(--space-7);font-size:15px;color:var(--text-muted)}
+
+/* faq */
+#faq{background:var(--nf-grey-300)}
+.faq-item{border-bottom:var(--stroke-hairline) solid var(--nf-blue)}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:var(--space-6) 0;font:var(--text-label-lg);font-size:18px;color:var(--nf-ink);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:var(--space-4)}
+.faq-q .plus{font-size:24px;color:var(--nf-blue);transition:transform .2s;flex:none}
+.faq-item.open .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
+.faq-a p{padding-bottom:var(--space-6);font-size:15px;line-height:1.6;color:var(--text-muted);max-width:640px}
+
+/* final cta */
+#final{background:var(--nf-blue);color:var(--nf-white);text-align:center}
+#final h2{font:var(--text-display-lg);font-size:56px;text-transform:uppercase;color:var(--nf-white);max-width:760px;margin:0 auto var(--space-7)}
+#final .btn{background:var(--nf-white);color:var(--nf-blue);font-size:16px;padding:var(--space-5) var(--space-9)}
+#final .fine{margin-top:var(--space-5);font-size:14px;color:rgba(255,255,255,0.75)}
+
+/* footer */
+footer{background:var(--nf-ink);color:rgba(255,255,255,0.6);padding:var(--space-7) 0}
+.footer-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:var(--space-5)}
+.footer-inner p{font-size:13px}
+
+.wrap{position:relative;z-index:1}
+.hero-grid{position:relative;z-index:1}
+.footer-inner{position:relative;z-index:1}
+@media (max-width:860px){
+.hero-grid{grid-template-columns:1fr;gap:40px}
+.hero h1{font-size:60px}
+.hero h2{font-size:22px}
+.about-grid,.logi-grid,.days,.alumni-grid,.terms{grid-template-columns:1fr}
+.nav-links{display:none}
+#final h2{font-size:36px}
+}
+
+/* marquee */
+.marquee{background:var(--nf-ink);color:var(--nf-white);overflow:hidden;padding:16px 0;white-space:nowrap}
+.marquee-track{display:inline-flex;animation:marquee 24s linear infinite}
+.marquee-group{display:inline-flex;align-items:center;gap:28px;padding-right:28px;flex:none}
+.marquee-track span{font:var(--text-label-lg);font-size:20px;text-transform:uppercase;letter-spacing:var(--tracking-loose);color:var(--nf-white)}
+.marquee-track span.dot{color:var(--nf-blue)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.marquee-track{animation:none}}
+#stats{background:var(--nf-white);padding:var(--space-8) 0}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-6);text-align:center}
+.stat-num{font:var(--text-display-xl);font-weight:600;font-size:60px;color:var(--nf-blue);line-height:1}
+.stat-label{margin-top:var(--space-3);font-size:13px;text-transform:uppercase;letter-spacing:var(--tracking-loose);color:var(--text-muted)}
+@media (max-width:860px){.stats-grid{grid-template-columns:repeat(2,1fr);gap:var(--space-7)}}
+[data-reveal]{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.7,.3,1),transform .7s cubic-bezier(.2,.7,.3,1)}
+[data-reveal].in-view{opacity:1;transform:translateY(0)}
+@media (prefers-reduced-motion:reduce){[data-reveal]{opacity:1;transform:none;transition:none}}
+.parallax-el{will-change:transform}
+</style>
+</head>
+<body>
+
+<nav>
+<div class="nav-inner">
+<div class="nf-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 269.080 181.812" fill="none" role="img" aria-label="НФ"><path d="M 51.285 14.299 C 40.037 14.299 37.749 15.443 37.749 22.878 L 37.749 58.529 L 84.268 58.529 L 84.268 22.878 C 84.268 15.443 82.17 14.299 70.922 14.299 L 70.922 0 L 122.207 0 L 122.207 14.299 C 110.959 14.299 108.671 15.443 108.671 22.878 L 108.671 112.864 C 108.671 119.311 110.39 121.026 118.179 121.369 C 117.867 118.716 117.704 115.924 117.704 112.987 C 117.704 74.285 147.064 60.177 181.19 59.033 L 181.19 46.069 L 205.594 46.069 L 205.594 59.033 C 239.72 59.987 269.08 73.332 269.08 112.987 C 269.08 151.689 239.72 165.796 205.594 166.94 L 205.594 181.812 L 181.19 181.812 L 181.19 166.94 C 154.673 166.2 131.035 157.977 121.812 135.742 L 70.922 135.742 L 70.922 121.443 C 82.17 121.443 84.268 120.3 84.268 112.864 L 84.268 73.591 L 37.749 73.591 L 37.749 112.864 C 37.749 120.3 40.037 121.443 51.285 121.443 L 51.285 135.742 L 0 135.742 L 0 121.443 C 11.248 121.443 13.346 120.3 13.346 112.864 L 13.346 22.878 C 13.346 15.443 11.248 14.299 0 14.299 L 0 0 L 51.285 0 L 51.285 14.299 Z M 182.334 72.569 C 159.456 73.332 143.061 83.627 143.061 112.987 C 143.061 142.537 159.456 152.832 182.334 153.404 L 182.334 72.569 Z M 204.449 153.404 C 227.518 152.642 243.723 142.538 243.724 112.987 C 243.724 83.437 227.518 73.141 204.449 72.569 L 204.449 153.404 Z" fill="currentColor" fill-rule="nonzero"></path></svg></div>
+<div class="nav-links">
+<a href="#about">О форуме</a>
+<a href="#theme">Тема</a>
+<a href="#logistics">Даты</a>
+<a href="#program">Программа</a>
+<a href="#recap">Прошлые НФ</a>
+<a href="#alumni">Участники</a>
+<a href="#faq">FAQ</a>
+</div>
+<a class="btn ghost" href="https://forms.yandex.ru/cloud/6a5f0a526d2d7328d5e0cea1" target="_blank" rel="noopener">Подать заявку</a>
+</div>
+</nav>
+
+<div class="marquee" aria-hidden="true"><div class="marquee-track"><div class="marquee-group"><span>Деньги территории</span><span class="dot">·</span><span>Сысерть</span><span class="dot">·</span><span>4–6 сентября 2026</span><span class="dot">·</span><span>Открытый набор НФ'26</span><span class="dot">·</span></div><div class="marquee-group"><span>Деньги территории</span><span class="dot">·</span><span>Сысерть</span><span class="dot">·</span><span>4–6 сентября 2026</span><span class="dot">·</span><span>Открытый набор НФ'26</span><span class="dot">·</span></div></div></div>
+
+<section class="hero" data-screen-label="hero">
+<div class="hero-grid">
+<div>
+<div id="hero-eyebrow-root"></div>
+<h1><span>Деньги</span><span>территории</span></h1>
+<p class="hero-body">«НФ» — это известное в узких кругах мероприятие для всех, кто занимается развитием территорий. Точка встречи без пиджаков для предпринимателей, урбанистов, представителей градообразующих компаний, авторов социокультурных проектов и других единомышленников. На юбилейном неформальном форуме будем отвечать на вопрос, как сделать так, чтобы территория зарабатывала.</p>
+<div class="hero-cta">
+<a class="btn" href="https://forms.yandex.ru/cloud/6a5f0a526d2d7328d5e0cea1" target="_blank" rel="noopener">Подать заявку</a>
+<span class="fine">приём заявок до 1 августа</span>
+</div>
+</div>
+<div class="hero-visual">
+<div class="hero-collage parallax-el" data-parallax="0.08">
+<div class="notch-frame p1"><image-slot id="hero-photo-1" shape="rect" placeholder="Фото · участники НФ" src="uploads/НФ Сысерть 1.jpg"></image-slot><div class="notch-fold"></div></div>
+<div class="notch-frame p2"><image-slot id="hero-photo-2" shape="rect" placeholder="Фото · Сысерть" src="uploads/НФ Сысерть 2.jpg"></image-slot><div class="notch-fold"></div></div>
+<div class="notch-frame p3"><image-slot id="hero-photo-3" shape="rect" placeholder="Фото · рабочий момент" src="uploads/НФ Сысерть 3.jpg"></image-slot><div class="notch-fold"></div></div>
+</div>
+</div>
+</div>
+</section>
+
+<section id="stats" data-screen-label="stats">
+<div class="wrap stats-grid">
+<div data-reveal><div class="stat-num" data-count="150">0</div><div class="stat-label">заявок ждём к 1 августа</div></div>
+<div data-reveal><div class="stat-num">10–30</div><div class="stat-label">участников отберём</div></div>
+<div data-reveal><div class="stat-num" data-count="3">0</div><div class="stat-label">дня кайфа</div></div>
+<div data-reveal><div class="stat-num">5-й</div><div class="stat-label">юбилейный неФорум</div></div>
+</div>
+</section>
+
+<section id="about" data-screen-label="about">
+<div class="wrap">
+<div class="section-head" data-reveal>
+<span class="eyebrow">О форуме</span>
+<h2>Мы — «Продюсер города»</h2>
+</div>
+<div class="about-grid">
+<div>
+<p>НФ проводит команда проекта «<a href="https://producergoroda.ru" target="_blank" rel="noopener">Продюсер города</a>» — во многом выросшего на практиках Агентства развития территорий 1732. Вместо станков и металла «на Заводе» в Сысерти мы «выпускаем» идеи: наполняем пространство креативом и превращаем его в место притяжения и вдохновения. Мы продюсируем малый город на Урале, запускаем социокультурные проекты и создаём среду, которая вдохновляет и привлекает гостей со всей страны.</p>
+<p>С 2022 года мы собираем НФ — единственный неформальный экспертный форум по развитию территорий. Здесь встречаются лидеры разных направлений, чтобы обменяться опытом, обсудить актуальные вызовы и выстроить доверительные связи. У нас нет формальных панелей — только открытый, равный диалог экспертов в максимально комфортной среде.</p>
+<p>В 2026 году — на юбилейный НФ — зовём в гости в Сысерть, туда, где всё начиналось. А еще событие впервые поддержал Фонд президентских грантов.</p>
+<div class="grant-badge"><img src="uploads/pgrants_logo_gp_horizontal.png" alt="При поддержке Фонда президентских грантов"></div>
+</div>
+<div class="about-photo parallax-el" data-parallax="0.08">
+<image-slot id="about-photo" shape="rect" placeholder="Фото с завода / команды" src="uploads/НФ Сысерть 4.jpg"></image-slot>
+</div>
+</div>
+</div>
+</section>
+
+<section id="theme" data-screen-label="theme">
+<div class="wrap">
+<div class="section-head" data-reveal>
+<span class="eyebrow">Тема и формат рабочей части</span>
+<h2>Деньги территории</h2>
+<p>В прошлые сезоны мы собирали модель продюсера города, учились строить фандрайзинг, работать с грантами и эндаументом. Сейчас — время разбрасывать камни: разбираемся, как продюсер территории может зарабатывать, выстраивая партнёрства с бизнесом, конвертируя пиар в инвестиции и находя новые модели устойчивой экономики территории.</p>
+</div>
+<div class="theme-list">
+<div class="theme-item" data-reveal><span class="num">01</span><p>Разберём реальный кейс — саму Сысерть, глазами продюсера. И будем обсуждать все инструменты не в теории и на бумаге, а на основе реального города.</p></div>
+<div class="theme-item" data-reveal><span class="num">02</span><p>Обсудим границу между продюсером территории и девелопером. А также две рельсы, на которых «едет» продюсер города.</p></div>
+<div class="theme-item" data-reveal><span class="num">03</span><p>Соберём инструменты и модели заработка, которые можно унести с собой. Никаких лекций и выученных выступлений — событие пройдет в формате хакатона.</p></div>
+<div class="theme-item" data-reveal><span class="num">04</span><p>Встретимся с теми, кто не только рассуждает, а делает — с бизнесом, инвесторами, экспертами.</p></div>
+</div>
+</section>
+
+<section id="logistics" data-screen-label="logistics">
+<div class="wrap">
+<div class="section-head" data-reveal>
+<span class="eyebrow">Явки и пароли</span>
+<h2>Даты, локация, условия</h2>
+</div>
+<div class="logi-grid">
+<div class="logi-card" data-reveal><span class="eyebrow">даты</span><div class="big">4–6 сентября<br>2026</div><p>Пятница–воскресенье, три дня рабочей программы.</p></div>
+<div class="logi-card" data-reveal><span class="eyebrow">место</span><div class="big">Сысерть</div><p>Креативный кластер «На Заводе».</p></div>
+<div class="logi-card" data-reveal><span class="eyebrow">дедлайн заявки</span><div class="big">1 августа<br>2026</div><p>Отберём 10–30 участников.</p></div>
+</div>
+<div class="terms">
+<div><h3>Условия участия</h3><p>С нас — проживание, питание и программа. С вас — добраться до Сысерти и привезти с собой свой опыт и энергию. Для всех, кто прошёл отбор, участие бесплатное.</p></div>
+<div><h3>Отбор</h3><p>Формат разработки и реализации рабочей программы предполагает вовлечённость каждого участника. Поэтому мы проводим отбор — нам важно собрать по-настоящему увлечённых и заинтересованных людей, идущих к общей цели.</p></div>
+</div>
+</div>
+</section>
+
+<section id="program" data-screen-label="program">
+<div class="wrap">
+<div class="section-head" data-reveal>
+<span class="eyebrow">Неформальная часть</span>
+<h2>Кайф, а не конференция</h2>
+<p>Рабочая программа — это полдела. Вторая половина НФ — люди, с которыми хочется остаться на связи, и форматы, в которых разговариваешь честнее, чем за круглым столом.</p>
+</div>
+<div class="days">
+<div class="day-card" data-reveal>
+<h3>У костра</h3>
+<p>Вечерние посиделки без регламента и модератора — тут рождаются самые честные разговоры о территориях.</p>
+</div>
+<div class="day-card" data-reveal>
+<h3>На пробежке</h3>
+<p>Питчим идеи на ходу — утренняя пробежка по Сысерти вместо собрания в переговорной.</p>
+</div>
+<div class="day-card" data-reveal>
+<h3>На пикнике</h3>
+<p>Вместо круглого стола — плед и дискуссия без презентаций и тайминга.</p>
+</div>
+<div class="day-card" data-reveal>
+<h3>За общим столом</h3>
+<p>Совместные ужины и завтраки — главное место, где завязываются партнёрства и дружба.</p>
+</div>
+</div>
+</div>
+</section>
+
+<section id="recap" data-screen-label="recap">
+<div class="wrap">
+<div class="section-head" data-reveal>
+<span class="eyebrow">НеФорум 2022–2026</span>
+<h2>Юбилейный, пятый неФорум</h2>
+<p>В 2026 году встречаемся уже в пятый раз. За эти годы через НФ прошёл круг агентов развития территорий со всей России — мы искали пути для сотрудничества и коллабораций, не теряли нити связи. Чаты первых сезонов до сих пор остаются живыми.</p>
+</div>
+<div class="recap-circles">
+<div data-reveal><div class="circle-wrap"><image-slot id="recap-2022" shape="circle" placeholder="Фото · 2022, Сысерть" src="uploads/НФ Костомукша 6.jpg"></image-slot></div><div class="circle-cap">2022 · Сысерть</div></div>
+<div data-reveal><div class="circle-wrap"><image-slot id="recap-2023" shape="circle" placeholder="Фото · 2023, Сысерть" src="uploads/НФ Костомукша 7.jpg"></image-slot></div><div class="circle-cap">2023 · Сысерть</div></div>
+<div data-reveal><div class="circle-wrap"><image-slot id="recap-2024" shape="circle" placeholder="Фото · 2024, Выкса" src="uploads/НФ Костомукша 8.jpg"></image-slot></div><div class="circle-cap">2024 · Выкса</div></div>
+<div data-reveal><div class="circle-wrap"><image-slot id="recap-2025" shape="circle" placeholder="Фото · 2025, Костомукша" src="uploads/НФ Костомукша 1.jpg"></image-slot></div><div class="circle-cap">2025 · Костомукша</div></div>
+</div>
+<div class="recap-video" data-reveal><div class="recap-video-frame"><iframe src="https://vkvideo.ru/video_ext.php?oid=-233032708&id=456239053&hd=2" title="Видео: участники прошлого НФ о проекте" frameborder="0" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><p class="recap-video-cap">Видео: участники прошлого НФ — о том, кто такой продюсер города</p></div>
+</div>
+</section>
+
+<section id="alumni" data-screen-label="alumni">
+<div class="wrap">
+<div class="section-head" data-reveal>
+<span class="eyebrow">Наше комьюнити</span>
+<h2>Те, кто уже приезжал</h2>
+<p>Не спикеры и не эксперты на сцене — люди, с которыми мы уже прошли не один сезон НФ и держим связь.</p>
+</div>
+<div class="alumni-grid">
+<div class="alumni-card" data-reveal><div class="alumni-photo"><image-slot id="alumni-1" shape="rect" placeholder="Фото" src="uploads/Александр Старков.jpg"></image-slot></div><div class="name">Александр Старков</div><div class="role">Автор программы «Городские герои»</div></div>
+<div class="alumni-card" data-reveal><div class="alumni-photo"><image-slot id="alumni-2" shape="rect" placeholder="Фото" src="uploads/Владислав Соколов.jpg"></image-slot></div><div class="name">Владислав Соколов</div><div class="role">Фонд «Центр гражданских и социальных инициатив Югры»</div></div>
+<div class="alumni-card" data-reveal><div class="alumni-photo"><image-slot id="alumni-3" shape="rect" placeholder="Фото" src="uploads/Ольга Лобурец.JPG"></image-slot></div><div class="name">Ольга Лобурец</div><div class="role">Фонд «Доброта Севера»</div></div>
+<div class="alumni-card" data-reveal><div class="alumni-photo"><image-slot id="alumni-4" shape="rect" placeholder="Фото" src="uploads/Анна Булочникова.JPG"></image-slot></div><div class="name">Анна Булочникова</div><div class="role">Основатель Территории.РФ</div></div>
+<div class="alumni-card" data-reveal><div class="alumni-photo"><image-slot id="alumni-5" shape="rect" placeholder="Фото" src="uploads/Дмитрий Поярков.JPG"></image-slot></div><div class="name">Дмитрий Поярков</div><div class="role">ПАО «Северсталь»</div></div>
+<div class="alumni-card" data-reveal><div class="alumni-photo"><image-slot id="alumni-6" shape="rect" placeholder="Фото" src="uploads/Илья Петрасов.PNG"></image-slot></div><div class="name">Илья Петрасов</div><div class="role">Директор по развитию ГК «Самолет»</div></div>
+</div>
+<p class="alumni-more">И ещё десятки людей нашего комьюнити — продюсеры городов, партнёры и друзья форума.</p>
+</div>
+</section>
+
+<section id="faq" data-screen-label="faq">
+<div class="wrap">
+<div class="section-head" data-reveal>
+<span class="eyebrow">FAQ</span>
+<h2>Вопросы и ответы</h2>
+</div>
+<div class="faq-list">
+<div class="faq-item" data-reveal><button class="faq-q"><span>Кто может подать заявку?</span><span class="plus">+</span></button><div class="faq-a"><p>Любой, кто впрягается в развитие территорий и хочет территорию, которая зарабатывает, а не только тратит. Продюсеры городов, представители фондов, бизнеса, муниципалитетов — и все, кто не боится слова «неформальный» в названии. Главное — не равнодушие к теме — остальное обсудим на месте.</p></div></div>
+<div class="faq-item" data-reveal><button class="faq-q"><span>Участие платное?</span><span class="plus">+</span></button><div class="faq-a"><p>Нет, и это не подвох. Если вы прошли отбор — мы берём на себя проживание, питание и всю программу, включая костёр и хорошее настроение. Ваша задача — привезти себя и идеи.</p></div></div>
+<div class="faq-item" data-reveal><button class="faq-q"><span>Как добраться до Сысерти?</span><span class="plus">+</span></button><div class="faq-a"><p>По традиции — с нас организация всего на месте, а с вас — добраться до города. Можете дойти пешком, доехать на велике, арендовать вертолёт, скооперироваться с другими участниками и приехать на пати-басе с диско-шаром (будем завидовать, честно). Короче — добирайтесь как хотите, главное будьте в Сысерти 4–6 сентября — мы встретим, накормим, напоим.</p></div></div>
+<div class="faq-item" data-reveal><button class="faq-q"><span>Когда узнаем результат отбора?</span><span class="plus">+</span></button><div class="faq-a"><p>В течение недели после дедлайна 1 августа придёт письмо. Никакой магии — просто мы быстро читаем и не любим держать в неведении.</p></div></div>
+<div class="faq-item" data-reveal><button class="faq-q"><span>Сколько человек соберётся?</span><span class="plus">+</span></button><div class="faq-a"><p>10–30 — не больше. Мы не гонимся за цифрами и не зовём всех подряд — чем меньше народу, тем больше доверия и костра на всех хватит.</p></div></div></div>
+</div>
+</section>
+
+<section id="final" data-screen-label="final">
+<div class="wrap" data-reveal>
+<h2>Готовы кайфануть в Сысерти и обсудить, как территории заработать деньги?</h2>
+<a class="btn" href="https://forms.yandex.ru/cloud/6a5f0a526d2d7328d5e0cea1" target="_blank" rel="noopener">Подать заявку</a>
+<div class="fine">приём заявок до 1 августа 2026</div>
+</div>
+</section>
+
+<footer>
+<div class="wrap footer-inner">
+<div class="nf-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 269.080 181.812" fill="none" role="img" aria-label="НФ"><path d="M 51.285 14.299 C 40.037 14.299 37.749 15.443 37.749 22.878 L 37.749 58.529 L 84.268 58.529 L 84.268 22.878 C 84.268 15.443 82.17 14.299 70.922 14.299 L 70.922 0 L 122.207 0 L 122.207 14.299 C 110.959 14.299 108.671 15.443 108.671 22.878 L 108.671 112.864 C 108.671 119.311 110.39 121.026 118.179 121.369 C 117.867 118.716 117.704 115.924 117.704 112.987 C 117.704 74.285 147.064 60.177 181.19 59.033 L 181.19 46.069 L 205.594 46.069 L 205.594 59.033 C 239.72 59.987 269.08 73.332 269.08 112.987 C 269.08 151.689 239.72 165.796 205.594 166.94 L 205.594 181.812 L 181.19 181.812 L 181.19 166.94 C 154.673 166.2 131.035 157.977 121.812 135.742 L 70.922 135.742 L 70.922 121.443 C 82.17 121.443 84.268 120.3 84.268 112.864 L 84.268 73.591 L 37.749 73.591 L 37.749 112.864 C 37.749 120.3 40.037 121.443 51.285 121.443 L 51.285 135.742 L 0 135.742 L 0 121.443 C 11.248 121.443 13.346 120.3 13.346 112.864 L 13.346 22.878 C 13.346 15.443 11.248 14.299 0 14.299 L 0 0 L 51.285 0 L 51.285 14.299 Z M 182.334 72.569 C 159.456 73.332 143.061 83.627 143.061 112.987 C 143.061 142.537 159.456 152.832 182.334 153.404 L 182.334 72.569 Z M 204.449 153.404 C 227.518 152.642 243.723 142.538 243.724 112.987 C 243.724 83.437 227.518 73.141 204.449 72.569 L 204.449 153.404 Z" fill="currentColor" fill-rule="nonzero"></path></svg></div>
+<p>НФ — неформальный форум по развитию территорий · 2026</p>
+</div>
+</footer>
+
+<script>
+(function(){
+var reveals=document.querySelectorAll('[data-reveal]');
+var io=new IntersectionObserver(function(entries){
+entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in-view');io.unobserve(e.target);}});
+},{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
+reveals.forEach(function(el){io.observe(el);});
+setTimeout(function(){reveals.forEach(function(el){el.classList.add('in-view');});io.disconnect();},1200);
+
+var counters=document.querySelectorAll('[data-count]');
+var cio=new IntersectionObserver(function(entries){
+entries.forEach(function(e){
+if(!e.isIntersecting)return;
+cio.unobserve(e.target);
+var target=parseInt(e.target.getAttribute('data-count'),10);
+var start=performance.now(),dur=1200;
+function tick(now){
+var p=Math.min((now-start)/dur,1);
+var eased=1-Math.pow(1-p,3);
+e.target.textContent=Math.round(eased*target);
+if(p<1)requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+});
+},{threshold:0.4});
+counters.forEach(function(el){cio.observe(el);});
+
+var parallaxEls=Array.prototype.slice.call(document.querySelectorAll('.parallax-el'));
+var reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!reduced&&parallaxEls.length){
+function onScroll(){
+var vh=window.innerHeight;
+parallaxEls.forEach(function(el){
+var factor=parseFloat(el.getAttribute('data-parallax'))||0.08;
+var r=el.getBoundingClientRect();
+var center=r.top+r.height/2-vh/2;
+el.style.transform='translateY('+(-center*factor)+'px)';
+});
+}
+window.addEventListener('scroll',onScroll,{passive:true});
+onScroll();
+}
+})();
+
+document.querySelectorAll('.faq-q').forEach(function(btn){
+btn.addEventListener('click',function(){
+var item=btn.closest('.faq-item');
+var a=item.querySelector('.faq-a');
+var open=item.classList.contains('open');
+document.querySelectorAll('.faq-item.open').forEach(function(o){o.classList.remove('open');o.querySelector('.faq-a').style.maxHeight=null;});
+if(!open){item.classList.add('open');a.style.maxHeight=a.scrollHeight+'px';}
+});
+});
+</script>
+
+<script type="text/babel">
+const { NotchedBadge } = window.DesignSystem_289ddf;
+ReactDOM.createRoot(document.getElementById('hero-eyebrow-root')).render(
+<NotchedBadge notch={14} corner="tr" fill="var(--nf-white)" textColor="var(--nf-blue)">Открытый набор — НФ'26</NotchedBadge>
+);
+</script>
+</body>
+</html>
