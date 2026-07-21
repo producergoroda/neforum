@@ -11,6 +11,6 @@
 --radius-sm:5px;
 --radius-md:24px;
 --radius-pill:999px;
---stroke-hairline:0.3px;
---stroke-hairline-thick:0.45px;
+--stroke-hairline:1px;
+--stroke-hairline-thick:1.5px;
 }
