@@ -13,10 +13,8 @@
 <link rel="preload" as="font" type="font/ttf" href="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/assets/fonts/RoyalTheatreSansDmBd.ttf" crossorigin="anonymous">
 <link rel="preload" as="font" type="font/ttf" href="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/assets/fonts/RoyalTheatreSerifLt.ttf" crossorigin="anonymous">
 <link rel="preload" as="font" type="font/ttf" href="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/assets/fonts/RoyalTheatreSerifDmBd.ttf" crossorigin="anonymous">
-<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
-<script src="_ds/design-system-289ddfc0-503d-4105-86b9-fc8a6396123f/_ds_bundle.js?v=2"></script>
+<link rel="preconnect" href="https://vk.com" crossorigin>
+<link rel="dns-prefetch" href="https://vk.com">
 <script src="image-slot.js?v=2"></script>
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
@@ -111,6 +109,9 @@ section{padding:170px 0;position:relative;overflow:hidden}
 .recap-video{text-align:center;margin-top:var(--space-8)}
 .recap-video-frame{position:relative;width:100%;max-width:800px;margin:0 auto;aspect-ratio:16/9;overflow:hidden;background:var(--nf-ink)}
 .recap-video-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.recap-video-play{position:absolute;inset:0;margin:auto;width:72px;height:72px;border-radius:50%;border:0;background:var(--nf-white);color:var(--nf-blue);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:transform .2s ease}
+.recap-video-play:hover{transform:scale(1.08)}
+.recap-video-play svg{margin-left:4px}
 .recap-video-cap{margin-top:var(--space-4);font-size:15px;color:var(--text-muted)}
 
 /* alumni */
@@ -215,14 +216,14 @@ section{padding:90px 0}
 <p class="hero-body">«НФ» — это известное в узких кругах мероприятие для всех, кто занимается развитием территорий. Точка встречи без пиджаков для предпринимателей, урбанистов, представителей градообразующих компаний, авторов социокультурных проектов и других единомышленников. На юбилейном неформальном форуме будем отвечать на вопрос, как сделать так, чтобы территория зарабатывала.</p>
 <div class="hero-cta">
 <a class="btn" href="https://forms.yandex.ru/cloud/6a5f0a526d2d7328d5e0cea1" target="_blank" rel="noopener">Подать заявку</a>
-<span class="fine">приём заявок до 1 августа</span>
+<span class="fine">приём заявок до 7 августа</span>
 </div>
 </div>
 </section>
 
 <section id="stats" data-screen-label="stats">
 <div class="wrap stats-grid">
-<div data-reveal><div class="stat-num" data-count="150">0</div><div class="stat-label">заявок ждём к 1 августа</div></div>
+<div data-reveal><div class="stat-num" data-count="150">0</div><div class="stat-label">заявок ждём к 7 августа</div></div>
 <div data-reveal><div class="stat-num">10–30</div><div class="stat-label">участников отберём</div></div>
 <div data-reveal><div class="stat-num" data-count="3">0</div><div class="stat-label">дня кайфа</div></div>
 <div data-reveal><div class="stat-num">5-й</div><div class="stat-label">юбилейный неФорум</div></div>
@@ -274,7 +275,7 @@ section{padding:90px 0}
 <div class="logi-grid">
 <div class="logi-card" data-reveal><span class="eyebrow">даты</span><div class="big">4–6 сентября<br>2026</div><p>Пятница–воскресенье, три дня рабочей программы.</p></div>
 <div class="logi-card" data-reveal><span class="eyebrow">место</span><div class="big">Сысерть</div><p>Креативный кластер «На Заводе».</p></div>
-<div class="logi-card" data-reveal><span class="eyebrow">дедлайн заявки</span><div class="big">1 августа<br>2026</div><p>Отберём 10–30 участников.</p></div>
+<div class="logi-card" data-reveal><span class="eyebrow">дедлайн заявки</span><div class="big">7 августа<br>2026</div><p>Отберём 10–30 участников.</p></div>
 </div>
 <div class="terms">
 <div><h3>Условия участия</h3><p>С нас — проживание, питание и программа. С вас — добраться до Сысерти и привезти с собой свой опыт и энергию. Для всех, кто прошёл отбор, участие бесплатное.</p></div>
@@ -324,7 +325,7 @@ section{padding:90px 0}
 <div data-reveal><div class="circle-wrap"><image-slot id="recap-2024" shape="circle" placeholder="Фото · 2024, Выкса" src="uploads/НФ Костомукша 8.jpg"></image-slot></div><div class="circle-cap">2024 · Выкса</div></div>
 <div data-reveal><div class="circle-wrap"><image-slot id="recap-2025" shape="circle" placeholder="Фото · 2025, Костомукша" src="uploads/НФ Костомукша 1.jpg"></image-slot></div><div class="circle-cap">2025 · Костомукша</div></div>
 </div>
-<div class="recap-video" data-reveal><div class="recap-video-frame"><iframe src="https://vk.com/video_ext.php?oid=-233032708&id=456239053&hd=2" title="Видео: участники прошлого НФ о проекте" frameborder="0" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><p class="recap-video-cap">Видео: участники прошлого НФ — о том, кто такой продюсер города</p><a class="recap-link" href="https://vkvideo.ru/video-233032708_456239053" target="_blank" rel="noopener">Смотреть видео на VK →</a></div>
+<div class="recap-video" data-reveal><div class="recap-video-frame" data-video-oid="-233032708" data-video-id="456239053"><button type="button" class="recap-video-play" aria-label="Включить видео"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button></div><p class="recap-video-cap">Видео: участники прошлого НФ — о том, кто такой продюсер города</p><a class="recap-link" href="https://vkvideo.ru/video-233032708_456239053" target="_blank" rel="noopener">Смотреть видео на VK →</a></div>
 </div>
 </section>
 
@@ -357,7 +358,7 @@ section{padding:90px 0}
 <div class="faq-item" data-reveal><button class="faq-q"><span>Кто может подать заявку?</span><span class="plus">+</span></button><div class="faq-a"><p>Любой, кто впрягается в развитие территорий и хочет территорию, которая зарабатывает, а не только тратит. Продюсеры городов, представители фондов, бизнеса, муниципалитетов — и все, кто не боится слова «неформальный» в названии. Главное — не равнодушие к теме — остальное обсудим на месте.</p></div></div>
 <div class="faq-item" data-reveal><button class="faq-q"><span>Участие платное?</span><span class="plus">+</span></button><div class="faq-a"><p>Нет, и это не подвох. Если вы прошли отбор — мы берём на себя проживание, питание и всю программу, включая костёр и хорошее настроение. Ваша задача — привезти себя и идеи.</p></div></div>
 <div class="faq-item" data-reveal><button class="faq-q"><span>Как добраться до Сысерти?</span><span class="plus">+</span></button><div class="faq-a"><p>По традиции — с нас организация всего на месте, а с вас — добраться до города. Можете дойти пешком, доехать на велике, арендовать вертолёт, скооперироваться с другими участниками и приехать на пати-басе с диско-шаром (будем завидовать, честно). Короче — добирайтесь как хотите, главное будьте в Сысерти 4–6 сентября — мы встретим, накормим, напоим.</p></div></div>
-<div class="faq-item" data-reveal><button class="faq-q"><span>Когда узнаем результат отбора?</span><span class="plus">+</span></button><div class="faq-a"><p>В течение недели после дедлайна 1 августа придёт письмо. Никакой магии — просто мы быстро читаем и не любим держать в неведении.</p></div></div>
+<div class="faq-item" data-reveal><button class="faq-q"><span>Когда узнаем результат отбора?</span><span class="plus">+</span></button><div class="faq-a"><p>В течение недели после дедлайна 7 августа придёт письмо. Никакой магии — просто мы быстро читаем и не любим держать в неведении.</p></div></div>
 <div class="faq-item" data-reveal><button class="faq-q"><span>Сколько человек соберётся?</span><span class="plus">+</span></button><div class="faq-a"><p>10–30 — не больше. Мы не гонимся за цифрами и не зовём всех подряд — чем меньше народу, тем больше доверия и костра на всех хватит.</p></div></div></div>
 </div>
 </section>
@@ -366,7 +367,7 @@ section{padding:90px 0}
 <div class="wrap" data-reveal>
 <h2>Готовы кайфануть в Сысерти и обсудить, как территории заработать деньги?</h2>
 <a class="btn" href="https://forms.yandex.ru/cloud/6a5f0a526d2d7328d5e0cea1" target="_blank" rel="noopener">Подать заявку</a>
-<div class="fine">приём заявок до 1 августа 2026</div>
+<div class="fine">приём заявок до 7 августа 2026</div>
 </div>
 </section>
 
@@ -420,6 +421,22 @@ window.addEventListener('scroll',onScroll,{passive:true});
 onScroll();
 }
 })();
+
+document.querySelectorAll('.recap-video-play').forEach(function(btn){
+btn.addEventListener('click',function(){
+var frame=btn.closest('.recap-video-frame');
+var oid=frame.getAttribute('data-video-oid');
+var id=frame.getAttribute('data-video-id');
+var iframe=document.createElement('iframe');
+iframe.src='https://vk.com/video_ext.php?oid='+oid+'&id='+id+'&autoplay=1';
+iframe.title='Видео: участники прошлого НФ о проекте';
+iframe.frameBorder='0';
+iframe.allow='autoplay; encrypted-media; fullscreen; picture-in-picture';
+iframe.allowFullscreen=true;
+frame.innerHTML='';
+frame.appendChild(iframe);
+});
+});
 
 document.querySelectorAll('.faq-q').forEach(function(btn){
 btn.addEventListener('click',function(){
