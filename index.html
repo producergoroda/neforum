@@ -275,7 +275,7 @@ section{padding:90px 0}
 <div data-reveal><div class="circle-wrap"><image-slot id="recap-2025" shape="circle" placeholder="Фото · 2025, Костомукша" src="uploads/НФ Костомукша 1.jpg"></image-slot></div><div class="circle-cap">2025 · Костомукша</div></div>
 <div data-reveal><div class="circle-wrap"><image-slot id="recap-2026" shape="circle" placeholder="Фото · 2026, Сысерть" src="uploads/nf26-sysert-group.jpg"></image-slot></div><div class="circle-cap">2026 · Сысерть</div></div>
 </div>
-<div class="recap-video" data-reveal><div class="recap-video-frame" data-video-oid="-233032708" data-video-id="456239053"><button type="button" class="recap-video-play" aria-label="Включить видео"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button></div><p class="recap-video-cap">Видео: участники НФ — о том, кто такой продюсер города</p><a class="recap-link" href="https://vkvideo.ru/video-233032708_456239053" target="_blank" rel="noopener">Смотреть видео на VK →</a></div>
+<div class="recap-video" data-reveal><div class="recap-video-frame" data-video-oid="-233032708" data-video-id="456239070" data-video-hash="0d47af2b806edd58"><button type="button" class="recap-video-play" aria-label="Включить видео"><svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M8 5v14l11-7z"/></svg></button></div><p class="recap-video-cap">Видео с юбилейного НФ'26 в Сысерти</p><a class="recap-link" href="https://vkvideo.ru/video-233032708_456239070" target="_blank" rel="noopener">Смотреть видео на VK →</a></div>
 </div>
 </section>
 
@@ -443,7 +443,8 @@ var frame=btn.closest('.recap-video-frame');
 var oid=frame.getAttribute('data-video-oid');
 var id=frame.getAttribute('data-video-id');
 var iframe=document.createElement('iframe');
-iframe.src='https://vk.com/video_ext.php?oid='+oid+'&id='+id+'&autoplay=1';
+var hash=frame.getAttribute('data-video-hash');
+iframe.src='https://vk.com/video_ext.php?oid='+oid+'&id='+id+(hash?'&hash='+hash:'')+'&hd=3&autoplay=1';
 iframe.title='Видео с НеФорума';
 iframe.frameBorder='0';
 iframe.allow='autoplay; encrypted-media; fullscreen; picture-in-picture';
